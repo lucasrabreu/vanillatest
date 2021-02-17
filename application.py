@@ -5,7 +5,7 @@ import os
 pw = os.environ.get('DB_PW', '1234')
 user = os.environ.get('DB_USER', 'admin')
 
-eng = create_engine('mysql+pymysql://{}:{}@database-test-1.c5yisr2rt5nu.us-east-1.rds.amazonaws.com/db'.format(pw))
+eng = create_engine('mysql+pymysql://{}:{}@database-test-1.c5yisr2rt5nu.us-east-1.rds.amazonaws.com/db'.format(user,pw))
 
 application = Flask(__name__)
 app = application
